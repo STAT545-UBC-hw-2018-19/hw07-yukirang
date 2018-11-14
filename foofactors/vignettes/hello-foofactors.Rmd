@@ -47,4 +47,22 @@ The `freq_out()` function returns a frequency table as a well-named `tbl_df`:
 ```{r}
 freq_out(x)
 ```
+The  `fdetect()`function checks a factor that should be character
+```{r}
+fdetect(a)
+```
+The  `freorder()`function reorders a factor in desendence
+```{r}
+freorder(a)
+```
+The  `fsetis()`function sets levels to the order in which they appear in the data
+```{r}
+fsetis(a)
+```
+The  `readdf()` and `writedf()` function read and write data frames from plain text delimited files
+```{r}
+readdf(filepath)
+writedf(df, filepath)
+```
+
 

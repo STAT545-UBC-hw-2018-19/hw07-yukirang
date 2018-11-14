@@ -1,4 +1,4 @@
-#' Read data frames from plain text delimited files
+#' write data frames from plain text delimited files
 #' @param df data frame
 #' @param filepath charactor
 #' @return charactor filename
