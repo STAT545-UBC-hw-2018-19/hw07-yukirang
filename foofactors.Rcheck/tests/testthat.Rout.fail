@@ -19,16 +19,15 @@ Type 'q()' to quit R.
 > library(foofactors)
 > 
 > test_check("foofactors")
-[31m──[39m [31m1. Error: fbind binds factor (or character) [39m
-object 'test.txt' not found
-1: factor(readdf(test.txt)) at testthat/test_fdetect.R:6
-2: readdf(test.txt)
-3: unlist(strsplit(filepath, ".", fixed = TRUE))
-4: strsplit(filepath, ".", fixed = TRUE)
+[31m──[39m [31m1. Error: fbind binds factor (or character)[39m
+object '' not found
+1: expect_identical(freorder(x)) at testthat/test_freorder.R:10
+2: quasi_label(enquo(expected), expected.label)
+3: eval_bare(get_expr(quo), get_env(quo))
 
-══ testthat results  ══════════════════════════
-OK: 2 SKIPPED: 0 FAILED: 1
-1. Error: fbind binds factor (or character) (@test_fdetect.R#6) 
+══ testthat results  ═════════════════════════
+OK: 5 SKIPPED: 0 FAILED: 1
+1. Error: fbind binds factor (or character) (@test_freorder.R#10) 
 
 Error: testthat unit tests failed
 Execution halted

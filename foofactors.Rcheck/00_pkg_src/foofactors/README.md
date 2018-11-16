@@ -8,7 +8,7 @@ Factors are a very useful type of variable in R, but they can also drive you nut
 ### Installation
 
 ``` r
-devtools::install_github("jennybc/foofactors")
+devtools::install_github("yukirang/foofactors")
 ```
 
 ### Quick demo
@@ -17,6 +17,7 @@ Binding two factors via `fbind()`:
 
 ``` r
 library(foofactors)
+library(gapminder)
 a <- factor(c("character", "hits", "your", "eyeballs"))
 b <- factor(c("but", "integer", "where it", "counts"))
 ```
@@ -59,12 +60,62 @@ The `freq_out()` function returns a frequency table as a well-named `tbl_df`:
 
 ``` r
 freq_out(x)
-#> # A tibble: 5 × 2
-#>        x     n
-#>   <fctr> <int>
-#> 1      a    25
-#> 2      b    26
-#> 3      c    17
-#> 4      d    17
-#> 5      e    15
+#> # A tibble: 5 x 2
+#>   x         n
+#>   <fct> <int>
+#> 1 a        25
+#> 2 b        26
+#> 3 c        17
+#> 4 d        17
+#> 5 e        15
+```
+
+The `fdetect()`function checks a factor that should be character
+
+``` r
+fdetect(a)
+#> [1] TRUE
+```
+
+The `freorder()`function reorders a factor in desendence
+
+``` r
+freorder(a)
+#> [1] "your"      "hits"      "eyeballs"  "character"
+```
+
+The `fsetis()`function sets levels to the order in which they appear in the data
+
+``` r
+fsetis(b)
+#> [1] but      integer  where it counts  
+#> Levels: but integer where it counts
+```
+
+The `readdf()` and `writedf()` function read and write data frames from plain text delimited files
+
+``` r
+filepath <- "test.txt"
+(df <- readdf(filepath))
+#>   V1 V2
+#> 1  1  a
+#> 2  2  b
+#> 3  3  c
+#> 4  4  d
+#> 5  5  e
+writedf(head(gapminder,10), filepath)
+# check whether the file has changed
+(df <- readdf(filepath))
+#>             V1        V2   V3      V4       V5          V6
+#> 1      country continent year lifeExp      pop   gdpPercap
+#> 2  Afghanistan      Asia 1952  28.801  8425333 779.4453145
+#> 3  Afghanistan      Asia 1957  30.332  9240934 820.8530296
+#> 4  Afghanistan      Asia 1962  31.997 10267083   853.10071
+#> 5  Afghanistan      Asia 1967   34.02 11537966 836.1971382
+#> 6  Afghanistan      Asia 1972  36.088 13079460 739.9811058
+#> 7  Afghanistan      Asia 1977  38.438 14880372   786.11336
+#> 8  Afghanistan      Asia 1982  39.854 12881816 978.0114388
+#> 9  Afghanistan      Asia 1987  40.822 13867957 852.3959448
+#> 10 Afghanistan      Asia 1992  41.674 16317921 649.3413952
+#> 11 Afghanistan      Asia 1997  41.763 22227415  635.341351
 ```

@@ -2,7 +2,7 @@
 % Please edit documentation in R/writedf.R
 \name{writedf}
 \alias{writedf}
-\title{Read data frames from plain text delimited files}
+\title{write data frames from plain text delimited files}
 \usage{
 writedf(df, filepath)
 }
@@ -15,5 +15,5 @@ writedf(df, filepath)
 charactor filename
 }
 \description{
-Read data frames from plain text delimited files
+write data frames from plain text delimited files
 }

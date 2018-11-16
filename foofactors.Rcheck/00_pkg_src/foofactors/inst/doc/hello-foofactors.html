@@ -12,7 +12,7 @@
 
 <meta name="author" content="Jenny Bryan" />
 
-<meta name="date" content="2018-11-13" />
+<meta name="date" content="2018-11-15" />
 
 <title>stringsAsFactors = HELLNO</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">stringsAsFactors = HELLNO</h1>
 <h4 class="author"><em>Jenny Bryan</em></h4>
-<h4 class="date"><em>2018-11-13</em></h4>
+<h4 class="date"><em>2018-11-15</em></h4>
 
 
 
@@ -112,6 +112,35 @@ x &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">
 ## 3 c        17
 ## 4 d        17
 ## 5 e        15</code></pre>
+<p>The <code>fdetect()</code>function checks a factor that should be character</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fdetect</span>(a)</code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>The <code>freorder()</code>function reorders a factor in desendence</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">freorder</span>(a)</code></pre></div>
+<pre><code>## [1] &quot;your&quot;      &quot;hits&quot;      &quot;eyeballs&quot;  &quot;character&quot;</code></pre>
+<p>The <code>fsetis()</code>function sets levels to the order in which they appear in the data</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">fsetis</span>(a)</code></pre></div>
+<pre><code>## [1] character hits      your      eyeballs 
+## Levels: character hits your eyeballs</code></pre>
+<p>The <code>readdf()</code> and <code>writedf()</code> function read and write data frames from plain text delimited files</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">filepath &lt;-<span class="st"> &quot;../test.txt&quot;</span>
+df &lt;-<span class="st"> </span><span class="kw">readdf</span>(filepath)
+<span class="kw">writedf</span>(df[<span class="dv">1</span>], filepath)
+<span class="co"># check whether the file has changed</span>
+(df &lt;-<span class="st"> </span><span class="kw">readdf</span>(filepath))</code></pre></div>
+<pre><code>##             V1
+## 1           V1
+## 2      country
+## 3  Afghanistan
+## 4  Afghanistan
+## 5  Afghanistan
+## 6  Afghanistan
+## 7  Afghanistan
+## 8  Afghanistan
+## 9  Afghanistan
+## 10 Afghanistan
+## 11 Afghanistan
+## 12 Afghanistan</code></pre>
 
 
 

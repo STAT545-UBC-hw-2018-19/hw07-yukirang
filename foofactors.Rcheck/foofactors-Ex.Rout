@@ -87,7 +87,7 @@ Levels: ctrl setosa trt1 trt2 versicolor virginica
 > cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  0.402 0.021 0.428 0 0 
+Time elapsed:  0.393 0.018 0.411 0 0 
 > grDevices::dev.off()
 null device 
           1 

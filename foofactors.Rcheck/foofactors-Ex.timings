@@ -1,3 +1,3 @@
 name	user	system	elapsed
-fbind	0.001	0.001	0.003	
-freq_out	0.320	0.012	0.335	
+fbind	0.001	0.000	0.002	
+freq_out	0.311	0.010	0.322	

@@ -20,8 +20,8 @@
 * checking ‘build’ directory ... OK
 * checking DESCRIPTION meta-information ... OK
 * checking top-level files ... NOTE
-Non-standard file/directory found at top level:
-  ‘test.txt’
+Non-standard files/directories found at top level:
+  ‘filename.txt’ ‘test.txt’
 * checking for left-over files ... OK
 * checking index information ... OK
 * checking package subdirectories ... OK
@@ -38,12 +38,10 @@ Non-standard file/directory found at top level:
 * checking foreign function calls ... OK
 * checking R code for possible problems ... NOTE
 freorder: no visible global function definition for ‘reorder’
-fsetis: no visible binding for global variable ‘x’
 readdf: no visible global function definition for ‘read.table’
 writedf: no visible global function definition for ‘write.table’
-writedf: no visible binding for global variable ‘x’
 Undefined global functions or variables:
-  read.table reorder write.table x
+  read.table reorder write.table
 Consider adding
   importFrom("stats", "reorder")
   importFrom("utils", "read.table", "write.table")
@@ -65,18 +63,18 @@ to your NAMESPACE file.
   Running ‘testthat.R’
 Running the tests in ‘tests/testthat.R’ failed.
 Last 13 lines of output:
+  > library(foofactors)
   > 
   > test_check("foofactors")
-  [31m──[39m [31m1. Error: fbind binds factor (or character) [39m
-  object 'test.txt' not found
-  1: factor(readdf(test.txt)) at testthat/test_fdetect.R:6
-  2: readdf(test.txt)
-  3: unlist(strsplit(filepath, ".", fixed = TRUE))
-  4: strsplit(filepath, ".", fixed = TRUE)
+  [31m──[39m [31m1. Error: fbind binds factor (or character)[39m
+  object '' not found
+  1: expect_identical(freorder(x)) at testthat/test_freorder.R:10
+  2: quasi_label(enquo(expected), expected.label)
+  3: eval_bare(get_expr(quo), get_env(quo))
   
-  ══ testthat results  ══════════════════════════
-  OK: 2 SKIPPED: 0 FAILED: 1
-  1. Error: fbind binds factor (or character) (@test_fdetect.R#6) 
+  ══ testthat results  ═════════════════════════
+  OK: 5 SKIPPED: 0 FAILED: 1
+  1. Error: fbind binds factor (or character) (@test_freorder.R#10) 
   
   Error: testthat unit tests failed
   Execution halted

@@ -17,7 +17,7 @@ VignetteBuilder: knitr
 URL: https://github.com/jennybc/foofactors
 BugReports: https://github.com/jennybc/foofactors/issues
 NeedsCompilation: no
-Packaged: 2018-11-14 07:40:04 UTC; rangke
+Packaged: 2018-11-16 07:10:19 UTC; rangke
 Author: Yuki Rang [aut, cre]
 Maintainer: Yuki Rang <rangkyuki@gmail.com>
-Built: R 3.5.1; ; 2018-11-14 07:41:48 UTC; unix
+Built: R 3.5.1; ; 2018-11-16 07:32:00 UTC; unix

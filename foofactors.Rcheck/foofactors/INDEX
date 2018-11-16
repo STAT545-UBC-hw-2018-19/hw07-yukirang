@@ -7,5 +7,5 @@ fsetis                  Set levels to the order in which they appear in
                         the data,
 readdf                  Read data frames from plain text delimited
                         files
-writedf                 Read data frames from plain text delimited
+writedf                 write data frames from plain text delimited
                         files
