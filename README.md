@@ -1,6 +1,10 @@
 Welcome to my repo for hw07!
 
 Install:
+```{r}
+library(devtools)
+install_github("STAT545-UBC-students/hw07-yukirang")
+```
 
 
 You might want to check:
