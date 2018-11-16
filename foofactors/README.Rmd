@@ -32,6 +32,7 @@ Binding two factors via `fbind()`:
 
 ```{r}
 library(foofactors)
+library(gapminder)
 a <- factor(c("character", "hits", "your", "eyeballs"))
 b <- factor(c("but", "integer", "where it", "counts"))
 ```
@@ -73,11 +74,14 @@ freorder(a)
 ```
 The  `fsetis()`function sets levels to the order in which they appear in the data
 ```{r}
-fsetis(a)
+fsetis(b)
 ```
 The  `readdf()` and `writedf()` function read and write data frames from plain text delimited files
 ```{r}
-readdf(filepath)
-writedf(df, filepath)
+filepath <- "test.txt"
+(df <- readdf(filepath))
+writedf(head(gapminder,10), filepath)
+# check whether the file has changed
+(df <- readdf(filepath))
 ```
 

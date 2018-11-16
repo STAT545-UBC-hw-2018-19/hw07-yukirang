@@ -61,7 +61,7 @@ fsetis(a)
 ```
 The  `readdf()` and `writedf()` function read and write data frames from plain text delimited files
 ```{r}
-readdf(filepath)
+df <- readdf(filepath)
 writedf(df, filepath)
 ```
 

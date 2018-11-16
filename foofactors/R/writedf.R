@@ -12,7 +12,7 @@ writedf <- function(df, filepath){
   # check whether it's plain text
   if(extention == "txt"){
     # read as data frame if the file is plain text
-    return(write.table(x,"filename.txt",sep="\t",row.names=FALSE))
+    return(write.table(df, filepath ,row.names=FALSE))
   }else{
     stop("Need a plain text delimited file.")
   }

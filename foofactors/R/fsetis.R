@@ -9,5 +9,5 @@ fsetis <- function(a){
   }
   # levels is an optional vector of the unique values (as character strings) that x might have taken.
   # The default is the unique set of values taken by as.character(x)
-  return(factor(x, levels = as.character(unique(a))))
+  return(factor(a, levels = as.character(unique(a))))
 }
